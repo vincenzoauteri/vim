@@ -1,5 +1,7 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible            
+
+" VUNDLE
+filetype off                
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,6 +21,21 @@ Plugin 'tpope/vim-surround'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"SYNSTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_css_checkers= ['csslint']
+let g:syntastic_js_checkers= ['jshint']
+let g:syntastic_html_checkers= ['jshint']
+
 set grepprg=grep\ -n
 set guifont=Monaco:h14
 colorscheme twilight256
