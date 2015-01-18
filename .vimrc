@@ -1,3 +1,24 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/html5.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-commentary'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 set grepprg=grep\ -n
 set guifont=Monaco:h14
 colorscheme twilight256
@@ -6,9 +27,9 @@ set autoindent
 set cindent
 set cino=(0
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 set showmatch
